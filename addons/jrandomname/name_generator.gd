@@ -6,22 +6,8 @@ static func pick_random(array):
 	return array[randi() % array.size()]
 
 static func new_name():
-	var path_start = "res://start.txt"
-	var path_middle = "res://middle.txt"
-	var path_end = "res://end.txt"
-	var start = load_file(path_start)
-	var middle = load_file(path_middle)
-	var end = load_file(path_end)
-	return pick_random(start) + pick_random(middle) + pick_random(end)
+	var start = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'Re', 'Dar', 'Me', 'Su', 'Za', 'Me', 'Bi', 'Du', 'Ac', 'Bo', 'Cr', 'Dan', 'Ee', 'Fr', 'Guu', 'Drac', 'Ch', 'Go', 'Ab', 'Ni']
+	var middle = ['', 'ir', 'ton', 'me', 'ch', 'ga', 'tc', 'er', "'", '-', 'aa', 'ee', 'oo', 'ii', 'uu', 'yy', 'a', 'e', 'i', 'o', 'u', 'y', 'ne', 'eh', 'ba']
+	var end = ['', 'a', 'e', 'i', 'o', 'u', 'be', 'y', 'tz', 's', 'er', 'ar', 'an', 'h', 'sh', '-san', 'ry', 'ette', 'ine', 'line', 'lyne', 'ene', 'lene', 'ise', 'ca', 'ka', 'ly', 'lin', 'ens', 'entz', 'tz', 'ot', 'ip', 'oz', 'winx', 'dox']
 
-static func load_file(path):
-	var tmp_name = []
-	if path:
-		var file = File.new()
-		var err = file.open(path, file.READ)
-		if err != OK:
-			print("Can't read ", path)
-		while !file.eof_reached():
-			var line = file.get_line()
-			tmp_name.append(line)
-		return tmp_name
+	return pick_random(start) + pick_random(middle) + pick_random(end)

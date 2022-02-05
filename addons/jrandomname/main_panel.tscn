@@ -11,13 +11,13 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="."]
-margin_right = 426.0
+margin_right = 1024.0
 margin_bottom = 20.0
 text = "Generate!"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 margin_top = 24.0
-margin_right = 426.0
+margin_right = 1024.0
 margin_bottom = 48.0
 
 [node name="Button" type="Button" parent="HBoxContainer"]
@@ -27,7 +27,7 @@ text = "Copy"
 
 [node name="LineEdit" type="LineEdit" parent="HBoxContainer"]
 margin_left = 47.0
-margin_right = 426.0
+margin_right = 1024.0
 margin_bottom = 24.0
 size_flags_horizontal = 3
 

@@ -4,15 +4,14 @@ var path_start = "res://start.txt"
 var path_middle = "res://middle.txt"
 var path_end = "res://end.txt"
 
-var default_start = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'Re', 'Dar', 'Me', 'Su', 'Za', 'Me', 'Bi', 'Du', 'Ac', 'Bo', 'Cr', 'Dan', 'Ee', 'Fr', 'Guu', 'Drac', 'Ch', 'Go']
-var default_middle = ['', 'ir', 'ton', 'me', 'ch', 'ga', 'tc', 'er', "'", '-', 'aa', 'ee', 'oo', 'ii', 'uu', 'yy']
-var default_end = ['', 'a', 'be', 'y', 'tz', 's', 'er', 'ar', 'an', 'h', 'sh', '-san', 'ry', 'ette', 'ine', 'line', 'lyne', 'ene', 'lene', 'ise', 'a', 'ca', 'ka', 'ly', 'lin', 'ens', 'entz', 'tz', 'o', 'ot', 'ip', 'oz']
+var default_start = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'Re', 'Dar', 'Me', 'Su', 'Za', 'Me', 'Bi', 'Du', 'Ac', 'Bo', 'Cr', 'Dan', 'Ee', 'Fr', 'Guu', 'Drac', 'Ch', 'Go', 'Ab', 'Ni']
+var default_middle = ['', 'ir', 'ton', 'me', 'ch', 'ga', 'tc', 'er', "'", '-', 'aa', 'ee', 'oo', 'ii', 'uu', 'yy', 'a', 'e', 'i', 'o', 'u', 'y', 'ne', 'eh', 'ba']
+var default_end = ['', 'a', 'e', 'i', 'o', 'u', 'be', 'y', 'tz', 's', 'er', 'ar', 'an', 'h', 'sh', '-san', 'ry', 'ette', 'ine', 'line', 'lyne', 'ene', 'lene', 'ise', 'ca', 'ka', 'ly', 'lin', 'ens', 'entz', 'tz', 'ot', 'ip', 'oz', 'winx', 'dox']
 
 func _ready():
 	check_and_create_files()
 	var my_name = jNameGenerator.new_name()
 	$TextEdit.text = my_name
-
 
 func _on_Button_pressed():
 	check_and_create_files()
@@ -40,7 +39,7 @@ func convert_text(my_array):
 	var names = ""
 	for i in range(0, my_array.size()):
 		names = names + my_array[i] + "\n"
-	names.erase(names.length() - 1, 2)
+	names.erase(names.length() - 1, 2) #Remove last newline
 	return names
 
 func check_and_create_files():
